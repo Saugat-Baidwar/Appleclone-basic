@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NavBar = () => {
   return (
     <>
@@ -21,11 +23,17 @@ const NavBar = () => {
         </ul>
       </div> */}
 
-      <div className="flex gap-[19.45px] items-center justify-center bg-black text-white mx-[462px]">
+      <div className=" h-[45px]  flex gap-[19.14px] items-center justify-center bg-black text-white ">
         <div>
-          <img src="/Applelogo.png" alt="Applelogo" />
+          <Link href="/">
+            <img src="/Applelogo.png" alt="Applelogo" />
+          </Link>
         </div>
-        <div>Store</div>
+
+        <Link href="/store/storeid">
+          <div>Store</div>
+        </Link>
+
         <div>Mac</div>
         <div>iPad</div>
         <div>iPhone</div>
@@ -36,11 +44,12 @@ const NavBar = () => {
         <div>Entertainment</div>
         <div>Accessories</div>
         <div>Supports</div>
-        <div>
-          <img src="/search.png" alt=" serch logo" />
+
+        <div className="flex items-center ">
+          <img src="/Search.png" alt=" serch logo" />
         </div>
         <div>
-          <img src="/cart.png" alt="cart logo" />
+          <img src="/Cart.png" alt="cart logo" />
         </div>
       </div>
     </>
